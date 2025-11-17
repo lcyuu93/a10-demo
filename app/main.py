@@ -1,6 +1,4 @@
-# app/main.py
-
-from app.calculator import add, subtract, multiply, divide
+from app.calculator import add
 from app.storage import save_expenses_to_file, load_expenses_from_file
 
 
@@ -11,6 +9,7 @@ def unsafe_calculate_expression(expr: str) -> float:
     """
     WARNING: This function is intentionally unsafe and uses eval()
     to demonstrate how SAST tools (e.g., Semgrep) can detect this pattern.
+
     """
     # DO NOT DO THIS IN REAL CODE.
     return eval(expr)  # noqa: S307

@@ -3,6 +3,7 @@
 import json  # noqa: F401  # intentionally unused to trigger a lint warning
 
 # Intentionally bad practice: hard-coded "secret" to let Semgrep complain.
+
 HARDCODED_API_KEY = "sk_live_1234567890_super_secret_key"  # noqa: S105
 
 
