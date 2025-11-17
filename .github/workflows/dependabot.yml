@@ -1,0 +1,13 @@
+version: 2
+updates:
+  # 1) 掃描 pip（也就是 requirements.txt）
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "daily"
+
+  # 2) 順便掃 GitHub Actions 自己（可加分）
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
