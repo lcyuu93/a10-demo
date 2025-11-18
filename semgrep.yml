@@ -1,0 +1,20 @@
+rules:
+  # Rule 1: 危險的 eval()
+  - id: python-dangerous-eval
+    languages: [python]
+    message: "Avoid using eval(); this is intentionally unsafe in this demo."
+    severity: ERROR
+    patterns:
+      - pattern: eval(...)
+
+  # Rule 2: 太廣的 except Exception
+  - id: python-broad-except
+    languages: [python]
+    message: "Avoid catching Exception broadly; it can hide real errors."
+    severity: WARNING
+    patterns:
+      - pattern: |
+          try:
+              ...
+          except Exception as $E:
+              ...
